@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="layer_area_style" catalog="saas_biz"
+		class="LayerAreaStyleEntity">
+	</table>
+	<table name="layer_point_style" catalog="saas_biz"
+		class="LayerPointStyleEntity">
+	</table>
+	<table name="netpoint_info" catalog="saas_biz"
+		class="NetPointInfoEntity">
+	</table>
+	<table name="layer_line_style" catalog="saas_biz"
+		class="LayerLineStyleEntity">
+	</table>
+	<table name="line_info" catalog="saas_biz" class="LineInfoStyle"></table>
+	<table name="fendan_layer" catalog="saas_biz"
+		class="FendanLayerEntity">
+	</table>
+	<table name="user_team_setting" catalog="saas_biz"
+		class="UserTeamSettingEntity">
+	</table>
+	<table name="data_optsync_status" catalog="saas_biz"
+		class="DataOptSyncStatusEntity">
+	</table>
+	<table name="team_setting" catalog="saas_base"
+		class="TeamSettingEntity">
+	</table>
+	<table name="custom_icon_info" catalog="oytest"
+		class="CustomIconInfo">
+	</table>
+	<table name="area_point_mapping" catalog="saas_biz"
+		class="AreaPointMappingEntity">
+	</table>
+	<table name="custom_method_info" catalog="saas_base"
+		class="CustomMethodInfoEntity">
+	</table>
+	<table name="custom_method_team_mapping" catalog="saas_base"
+		class="CustomMethodTeamMappingEntity">
+	</table>
+	<table name="area_audit_info" catalog="saas_biz"
+		class="AreaAuditInfoEntity">
+	</table>
+	<table name="user_team_share" catalog="saas_biz" class="UserTeamShareEntity"></table>
+</hibernate-reverse-engineering>
