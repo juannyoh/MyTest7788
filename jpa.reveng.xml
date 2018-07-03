@@ -42,5 +42,23 @@
 	<table name="area_audit_info" catalog="saas_biz"
 		class="AreaAuditInfoEntity">
 	</table>
-	<table name="user_team_share" catalog="saas_biz" class="UserTeamShareEntity"></table>
+	<table name="user_team_share" catalog="saas_biz"
+		class="UserTeamShareEntity">
+	</table>
+	<table name="message_info" catalog="saas_biz"
+		class="MessageInfoEntity">
+	</table>
+	<table name="user_message_mapping" catalog="saas_biz"
+		class="UserMessageMappingEntity">
+	</table>
+	<table name="user_map_info" catalog="saas_biz"
+		class="UserMapInfoEntity">
+	</table>
+	<table name="common_map_function" catalog="saas_base"
+		class="CommonMapFunctionEntity">
+	</table>
+	<table name="custom_map_function" catalog="saas_biz"
+		class="CustomMapFunctionEntity">
+	</table>
+	<table name="user_team_monitor" catalog="saas_biz" class="UserTeamMonitorEntity"></table>
 </hibernate-reverse-engineering>

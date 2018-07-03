@@ -63,17 +63,32 @@ public class EncryptUtils {
 
     public static void main(String[] args) {
         Map<String, String> params = Maps.newHashMap();
-        params.put("ak", "b82f5241ff6f4a32b78ef7e034bab693");
-        params.put("user_account", "FpVBFEBdQWH3WXrhbHmZng==");
-        params.put("user_password", "L5Z+4iObqSG6WHQyyrVdyQ==");
+//        params.put("ak", "30bdc45ee00940cda7917d134fdb1523");
+//        params.put("custom_id", "{\"fieldName\":\"名称\",\"fieldValue\":\"网点1API\"}");
+//        params.put("x", "120.12");
+//        params.put("y", "30.123");
+//        params.put("name", "网点1API");
+//        params.put("coord_type", "gcj02");
+//        params.put("infos", "[{\"fieldName\":\"啊啊\",\"fieldValue\":\"1111\"}]");
+//        params.put("x", "89.234");
+//        params.put("y", "43.487");
+//        params.put("name", "网点1");
+//        params.put("layer_code", "01e");
+//        params.put("coord_type", "gcj02");
+//        params.put("infos", "[{\"fieldName\":\"负责人\",\"fieldValue\":\"张三\"},{\"fieldName\":\"电话\",\"fieldValue\":\"12345678\"}]");
+//        params.put("t", "1524047656");
+        
+        params.put("ak", "30bdc45ee00940cda7917d134fdb1523");
+        params.put("user_account", "h0a0cVz9G+QR7IkX1avqkw==");
+        params.put("user_password", "h0a0cVz9G+QR7IkX1avqkw==");
         params.put("role_level", "3");
-        params.put("t", "45651039031");
-        params.put("isAvailable", "true");
-//        params.put("layer_rights",
-//                "{\"isClear\":false,\"rights\":[{\"layerCode\":\"026\",\"optType\":1},{\"layerCode\":\"02a\",\"optType\":2}]}");
+        params.put("t", "1504672784955");
+//        params.put("isAvailable", "true");
+        params.put("layer_rights",
+                "{\"isClear\":false,\"rights\":[{\"layerCode\":\"017\",\"optType\":3},{\"layerCode\":\"017_001\",\"optType\":1}]}");
 //        params.put("sign", "bb94072576c99e37739bc956f5cc3e2a");
 
-        String sign = EncryptUtils.signRequest(params, "8aafdd8c5d8eaf58015d97c032780027");
+        String sign = EncryptUtils.signRequest(params, "d23c35525cdc4f1783bf8b048cc1c605");
         System.out.println(sign);
         
         
