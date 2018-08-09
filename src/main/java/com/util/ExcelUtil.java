@@ -19,6 +19,9 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
+
 /**
  * EXCEL解析类
  */
@@ -83,7 +86,7 @@ public class ExcelUtil {
 	                List<String> valueList = new ArrayList<String>();
 	                if (row != null) {
 	                    Cell cell = null;
-	                    for (int j = 0; j < 2; j++) {
+	                    for (int j = 1; j < 2; j++) {
 	                        cell = row.getCell(j);
 	                        if (cell != null) {
 	                            if (j == 0) {// 第一列强制设置为文本类型
@@ -249,26 +252,58 @@ public class ExcelUtil {
 	public static void main(String[] args) {
 		try {
 			InputStream is = new FileInputStream(
-					"C:\\Users\\Administrator\\Desktop\\区划数据-全部图层-2018-06-27.xlsx");
-			Map<String, Object> map = readExcel(is, "区划数据-全部图层-2018-06-27.xlsx", 1);
+					"C:\\Users\\Administrator\\Desktop\\区划数据-全部图层-2018-07-05.xlsx");
+			Map<String, Object> map = readExcel(is, "区划数据-全部图层-2018-07-05.xlsx", 1);
 			List<List<String>> namesList = (List<List<String>>) map
 					.get("datas");
 			int nameSize = namesList.size();
 			List<String> resultList = new ArrayList<String>();
 			for (int i = 0; i < nameSize; i++) {
 				StringBuilder sb = new StringBuilder();
-//				List<String> nameLi = new ArrayList<String>();
-//				for (int j = 0; j < nameSize; j++) {
-//					int index = RandomUtils.nextInt(0, namesList.size());
-//					nameLi.add(namesList.get(index).get(0));
-//				}
 				sb.append(StringUtils.join(namesList.get(i), ","));
 				resultList.add(sb.toString());
 			}
+			
+			Map<String,Long> maps=Maps.newHashMap();
+			for (int i = 0; i < resultList.size() - 1; i++) {
+                long count=maps.getOrDefault(resultList.get(i), 0l);
+                if(count>0){
+                    count++;
+                }else{
+                    count=1;
+                }
+                maps.put(resultList.get(i), count);//把相同元素加入list(找出相同的)
+                if(count>1){
+                    System.out.println(resultList.get(i)+","+count);
+                }
+            }
+			
 
-			IOUtils.writeLines(resultList, "\r\n", new FileOutputStream(
-					"C:\\Users\\Administrator\\Desktop\\aaa-" + nameSize + ".csv"), "utf-8");
-
+//			for (int i = 0; i < resultList.size() - 1; i++) {
+//	            for (int j = resultList.size() - 1; j > i; j--) {
+//	                if (resultList.get(j).equals(resultList.get(i))) {
+//	                    long count=maps.getOrDefault(resultList.get(j), 0l);
+//	                    if(maps.containsKey(resultList.get(j))){
+//	                        count++;
+//	                    }
+//	                    maps.put(resultList.get(j), count);//把相同元素加入list(找出相同的)
+//	                }
+//	            }
+//	        }
+//			
+//			List<String> lists=Lists.newArrayList();
+//			for(String key:maps.keySet()){
+//			    if(maps.get(key)>1){
+//			        System.out.println(key+","+maps.get(key));
+//			        lists.add(key+","+maps.get(key));
+//			    }
+//			}
+//			
+//			IOUtils.writeLines(lists, "\r\n", new FileOutputStream(
+//					"C:\\Users\\Administrator\\Desktop\\aaa-" + lists.size() + ".csv"), "utf-8");
+//			
+			
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -78,17 +78,17 @@ public class EncryptUtils {
 //        params.put("infos", "[{\"fieldName\":\"负责人\",\"fieldValue\":\"张三\"},{\"fieldName\":\"电话\",\"fieldValue\":\"12345678\"}]");
 //        params.put("t", "1524047656");
         
-        params.put("ak", "30bdc45ee00940cda7917d134fdb1523");
-        params.put("user_account", "h0a0cVz9G+QR7IkX1avqkw==");
-        params.put("user_password", "h0a0cVz9G+QR7IkX1avqkw==");
+        params.put("ak", "af99ac257f4449ce86f2a3f402abcc53");
+        params.put("user_account", "lTj2ij4WRl1gpcguwxXE6g==");
+        params.put("user_password", "T2jr4OeUl5BiEu2TJGoSltuyFT0UKz8OVu8py9xs64g=");
         params.put("role_level", "3");
         params.put("t", "1504672784955");
 //        params.put("isAvailable", "true");
-        params.put("layer_rights",
-                "{\"isClear\":false,\"rights\":[{\"layerCode\":\"017\",\"optType\":3},{\"layerCode\":\"017_001\",\"optType\":1}]}");
+//        params.put("layer_rights",
+//                "{\"isClear\":false,\"rights\":[{\"layerCode\":\"017\",\"optType\":3},{\"layerCode\":\"017_001\",\"optType\":1}]}");
 //        params.put("sign", "bb94072576c99e37739bc956f5cc3e2a");
 
-        String sign = EncryptUtils.signRequest(params, "d23c35525cdc4f1783bf8b048cc1c605");
+        String sign = EncryptUtils.signRequest(params, "df666850016d4fd69e02527ac8ff3709");
         System.out.println(sign);
         
         
