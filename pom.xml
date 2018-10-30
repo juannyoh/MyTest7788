@@ -1,37 +1,37 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.dituhui.ouye</groupId>
-  <artifactId>Mytest</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>Mytest Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-    
-    <dependency>  
-		    <groupId>org.apache.httpcomponents</groupId>  
-		    <artifactId>httpclient</artifactId>  
-		    <version>4.5.1</version>  
-		</dependency>  
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.dituhui.ouye</groupId>
+	<artifactId>Mytest</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Mytest Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.1</version>
+		</dependency>
 		<!-- JSON -->
 		<dependency>
-		  <groupId>net.sf.json-lib</groupId>
-		  <artifactId>json-lib</artifactId>
-		  <version>2.4</version>
-		  <classifier>jdk15</classifier>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<classifier>jdk15</classifier>
 		</dependency>
 		<!-- FASTJSON -->
 		<dependency>
-		  <groupId>com.alibaba</groupId>
-		  <artifactId>fastjson</artifactId>
-		  <version>1.2.7</version>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.7</version>
 		</dependency>
 		<!-- hibernate -->
 		<dependency>
@@ -46,33 +46,49 @@
 		</dependency>
 		<!-- GEOJSON -->
 		<dependency>
-		    <groupId>org.geotools</groupId>
-		    <artifactId>gt-geojson</artifactId>
-		    <version>17.1</version>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-geojson</artifactId>
+			<version>17.1</version>
 		</dependency>
 		<dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.5</version>
-        </dependency>
-        <!-- EXCEL -->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>3.9</version>
-        </dependency>
-         <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.5</version>
-        </dependency>
-        <dependency>
-            <groupId>com.dituhui.saas</groupId>
-            <artifactId>framework</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-  </dependencies>
-  <build>
-    <finalName>Mytest</finalName>
-  </build>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.5</version>
+		</dependency>
+		<!-- EXCEL -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.9</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dituhui.saas</groupId>
+			<artifactId>framework</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dituhui.saas</groupId>
+			<artifactId>service-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.stuxuhai</groupId>
+			<artifactId>jpinyin</artifactId>
+			<version>1.1.8</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.github.albfernandez/javadbf -->
+		<dependency>
+			<groupId>com.github.albfernandez</groupId>
+			<artifactId>javadbf</artifactId>
+			<version>1.9.2</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>Mytest</finalName>
+	</build>
 </project>

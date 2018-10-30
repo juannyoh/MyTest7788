@@ -60,5 +60,8 @@
 	<table name="custom_map_function" catalog="saas_biz"
 		class="CustomMapFunctionEntity">
 	</table>
-	<table name="user_team_monitor" catalog="saas_biz" class="UserTeamMonitorEntity"></table>
+	<table name="user_team_monitor" catalog="saas_biz"
+		class="UserTeamMonitorEntity">
+	</table>
+	<table name="workflow_log" catalog="saas_biz" class="WorkFlowLogEntity"></table>
 </hibernate-reverse-engineering>
